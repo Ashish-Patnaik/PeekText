@@ -1,0 +1,185 @@
+/* src/styles/Hero.css */
+.hero-section {
+    padding-top: 3rem; /* py-12 */
+    padding-bottom: 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .hero-content {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 3rem; /* mb-12 */
+  }
+  
+  .hero-title {
+    font-size: 2.25rem; /* text-4xl */
+    font-weight: 700; /* font-bold */
+    margin-bottom: 1.5rem; /* mb-6 */
+    line-height: 1.2; /* leading-tight */
+  }
+  
+  .hero-title span {
+    display: block;
+  }
+  
+  .hero-title-highlight {
+    background: linear-gradient(to right, var(--color-pink-300), var(--color-purple-300));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  
+  .hero-description {
+    font-size: 1.125rem; /* text-lg */
+    opacity: 0.8; /* opacity-80 */
+    margin-bottom: 2rem; /* mb-8 */
+    max-width: 36rem; /* max-w-xl */
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .hero-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem; /* gap-4 */
+    justify-content: center;
+  }
+  
+  /* Buttons defined in utilities.css */
+  .hero-button-primary {
+      padding: 1rem 2rem; /* px-8 py-4 */
+      font-size: 1.125rem; /* text-lg */
+  }
+  .hero-button-secondary {
+      padding: 1rem 2rem; /* px-8 py-4 */
+      font-size: 1.125rem; /* text-lg */
+  }
+  
+  
+  .hero-image-container {
+    width: 100%;
+    position: relative;
+    margin-top: 2.5rem; /* mt-10 */
+  }
+  
+  .hero-image-wrapper {
+    position: relative;
+    z-index: 10;
+    max-width: 28rem; /* max-w-md */
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .hero-image-card { /* Uses .glass-card */
+    padding: 1rem; /* p-4 */
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); /* shadow-2xl */
+    border-radius: 0.75rem; /* rounded-xl */
+  }
+  
+  .hero-image-inner {
+      position: relative; /* For absolute positioning of text */
+  }
+  
+  .hero-image-text-overlay {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 3rem; /* text-5xl */
+      color: white;
+      opacity: 0.5;
+      z-index: 0;
+      pointer-events: none; /* Allows interaction with image if needed */
+  }
+  
+  
+  .hero-image {
+    border-radius: 0.5rem; /* rounded-lg */
+    width: 100%;
+    height: auto;
+    position: relative;
+    z-index: 10; /* Above text overlay */
+  }
+  
+  /* Decorative Blobs */
+  .hero-blob {
+      position: absolute;
+      border-radius: 9999px; /* rounded-full */
+      mix-blend-mode: multiply;
+      filter: blur(1.5rem); /* blur-2xl */
+      opacity: 0.4;
+      animation: pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+      width: 8rem; /* w-32 */
+      height: 8rem; /* h-32 */
+      pointer-events: none;
+  }
+  @keyframes pulse {
+      50% { opacity: 0.6; }
+  }
+  
+  .hero-blob-pink {
+      background-color: var(--color-pink-500);
+      top: 25%;
+      right: -4rem; /* -right-16 */
+  }
+  
+  .hero-blob-purple {
+      background-color: var(--color-purple-600);
+      bottom: 25%;
+      left: -4rem; /* -left-16 */
+      animation-delay: 2s; /* animation-delay-2000 */
+  }
+  
+  /* Responsive */
+  @media (min-width: 640px) { /* sm */
+      .hero-actions {
+          flex-direction: row;
+      }
+       .hero-image-text-overlay {
+          font-size: 3.75rem; /* md:text-6xl */
+      }
+  }
+  
+  @media (min-width: 768px) { /* md */
+      .hero-title {
+          font-size: 3rem; /* md:text-5xl */
+      }
+      .hero-description {
+          font-size: 1.25rem; /* md:text-xl */
+      }
+       .hero-section {
+          padding-top: 5rem; /* md:py-20 */
+          padding-bottom: 5rem;
+      }
+  }
+  
+  @media (min-width: 1024px) { /* lg */
+      .hero-section {
+          flex-direction: row;
+          align-items: center;
+      }
+      .hero-content {
+          width: 50%;
+          text-align: left;
+          margin-bottom: 0; /* lg:mb-0 */
+      }
+      .hero-title {
+          font-size: 3.75rem; /* lg:text-6xl */
+      }
+      .hero-description {
+          margin-left: 0; /* lg:mx-0 */
+      }
+      .hero-actions {
+          justify-content: flex-start; /* lg:justify-start */
+      }
+      .hero-image-container {
+          width: 50%;
+          margin-top: 0; /* lg:mt-0 */
+      }
+    }

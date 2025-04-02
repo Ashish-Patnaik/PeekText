@@ -1,0 +1,152 @@
+/* src/styles/utilities.css */
+
+/* Glass Card Effect */
+.glass-card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.2);
+    border-radius: 0.75rem; /* rounded-xl */
+  }
+  
+  /* Button Shine */
+  .button-shine {
+    position: relative;
+    overflow: hidden;
+  }
+  .button-shine::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,0.3) 50%, rgba(255,255,255,0) 100%);
+    transform: rotate(30deg);
+    animation: shine 4s infinite linear;
+  }
+  
+  /* Floating Animation */
+  .floating {
+    animation: float 6s ease-in-out infinite;
+  }
+  
+  /* CSS Toggle (Adapted) */
+  .toggle-switch {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
+  }
+  
+  .toggle-checkbox { /* Hide actual checkbox */
+    opacity: 0;
+    width: 0;
+    height: 0;
+    position: absolute;
+  }
+  
+  .toggle-label {
+    width: 2.75rem; /* w-11 */
+    height: 1.5rem;  /* h-6 */
+    background-color: var(--color-gray-600); /* bg-gray-600 */
+    border-radius: 9999px; /* rounded-full */
+    position: relative;
+    transition: background-color 0.2s ease-in-out;
+  }
+  
+  .toggle-dot {
+    position: absolute;
+    left: 0.25rem; /* left-1 */
+    top: 0.25rem;  /* top-1 */
+    background-color: white;
+    border: 1px solid var(--color-gray-600); /* border-gray-300 - adjusted color */
+    border-radius: 50%;
+    width: 1rem;  /* h-4 w-4 */
+    height: 1rem;
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  .toggle-checkbox:checked + .toggle-label {
+    background-color: var(--color-indigo-600); /* checked:bg-indigo-600 */
+  }
+  
+  .toggle-checkbox:checked + .toggle-label .toggle-dot {
+    transform: translateX(1.25rem); /* Translates dot to the right */
+    border-color: var(--color-indigo-600);
+  }
+  
+  .toggle-checkbox:focus + .toggle-label { /* Optional focus ring */
+     box-shadow: 0 0 0 2px rgba(79, 70, 229, 0.4); /* focus:ring-2 focus:ring-indigo-400 */
+  }
+  
+  /* Loading Spinner */
+  .loader {
+    width: 48px;
+    height: 48px;
+    border: 3px solid var(--color-white);
+    border-radius: 50%;
+    display: inline-block;
+    position: relative;
+    box-sizing: border-box;
+    animation: rotation 1s linear infinite;
+  }
+  .loader::after {
+    content: '';
+    box-sizing: border-box;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 3px solid transparent;
+    border-bottom-color: var(--scrollbar-thumb); /* Use a theme color */
+  }
+  
+  /* Common Button Styling (Example) */
+  .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.75rem 1.5rem; /* py-3 px-6 approx */
+      border-radius: 9999px; /* rounded-full */
+      font-weight: 600; /* font-semibold */
+      font-size: 1rem; /* text-base or lg depending on context */
+      transition: all 0.2s ease-in-out;
+      text-align: center;
+  }
+  
+  .button-primary {
+      background-color: var(--color-white);
+      color: var(--color-indigo-600);
+  }
+  .button-primary:hover {
+      background-color: rgba(255, 255, 255, 0.9);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  .button-secondary {
+      border: 1px solid var(--color-white);
+      color: var(--color-white);
+  }
+  .button-secondary:hover {
+      background-color: var(--color-white);
+      color: var(--color-indigo-600);
+  }
+  
+  .button-gradient {
+      background: linear-gradient(to right, var(--color-indigo-600), var(--color-purple-600));
+      color: var(--color-white);
+  }
+  .button-gradient:hover {
+       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+       filter: brightness(1.1);
+  }
+  .button-gradient:disabled {
+      opacity: 0.4;
+      cursor: not-allowed;
+      filter: grayscale(50%);
+  }

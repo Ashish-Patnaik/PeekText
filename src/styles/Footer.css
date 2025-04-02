@@ -1,0 +1,110 @@
+/* src/styles/Footer.css */
+.footer {
+    padding-top: 3rem; /* py-12 */
+    padding-bottom: 3rem;
+    background-color: rgba(49, 46, 129, 0.8); /* bg-indigo-900/80 */
+    backdrop-filter: blur(4px); /* backdrop-blur-sm */
+    margin-top: 2.5rem; /* mt-10 */
+  }
+  
+  .footer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .footer-brand {
+    margin-bottom: 1.5rem; /* mb-6 */
+    text-align: center;
+  }
+  
+  .footer-logo-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .footer-logo-container svg {
+    width: 2rem; /* h-8 w-8 */
+    height: 2rem;
+    margin-right: 0.5rem; /* mr-2 */
+  }
+  
+  .footer-brand-name {
+    font-size: 1.25rem; /* text-xl */
+    font-weight: 700; /* font-bold */
+  }
+  
+  .footer-tagline {
+    font-size: 0.875rem; /* text-sm */
+    opacity: 0.7; /* opacity-70 */
+    margin-top: 0.5rem; /* mt-2 */
+  }
+  
+  .footer-links-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem; /* gap-8 */
+    text-align: center;
+    width: 100%;
+  }
+  
+  .footer-link-group {
+      min-width: 120px; /* Give groups some minimum width */
+  }
+  
+  .footer-link-heading {
+    font-weight: 600; /* font-semibold */
+    margin-bottom: 0.75rem; /* mb-3 */
+  }
+  
+  .footer-link-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem; /* space-y-2 */
+    font-size: 0.875rem; /* text-sm */
+    opacity: 0.7; /* opacity-70 */
+  }
+  
+  .footer-link-list a {
+    transition: color 0.2s;
+  }
+  .footer-link-list a:hover {
+    color: var(--color-pink-300); /* hover:text-pink-300 */
+  }
+  
+  .footer-copyright-container {
+    margin-top: 3rem; /* mt-12 */
+    padding-top: 1.5rem; /* pt-6 */
+    border-top: 1px solid rgba(255, 255, 255, 0.2); /* border-t border-white border-opacity-20 */
+    text-align: center;
+    font-size: 0.875rem; /* text-sm */
+    opacity: 0.6; /* opacity-60 */
+    width: 100%; /* Ensure it spans full width for border */
+  }
+  
+  /* Responsive */
+  @media (min-width: 768px) { /* md */
+    .footer-container {
+      flex-direction: row;
+      align-items: flex-start; /* Align items to top */
+    }
+    .footer-brand {
+      margin-bottom: 0; /* md:mb-0 */
+      text-align: left; /* md:text-left */
+    }
+     .footer-logo-container {
+      justify-content: flex-start; /* md:justify-start */
+     }
+    .footer-links-container {
+      justify-content: space-around; /* Spread links */
+      text-align: left; /* md:text-left */
+      flex-grow: 1; /* Allow links to take space */
+      margin-left: 2rem; /* Add some space from brand */
+    }
+  }

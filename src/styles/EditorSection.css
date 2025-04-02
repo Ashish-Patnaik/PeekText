@@ -1,0 +1,271 @@
+/* src/styles/EditorSection.css */
+.editor-section {
+    padding-top: 4rem; /* py-16 */
+    padding-bottom: 5rem; /* md:py-20 */
+  }
+  
+  .editor-container {
+    text-align: center;
+  }
+  
+  .editor-main-heading {
+    background: linear-gradient(to right, rgba(79, 70, 229, 0.2), rgba(124, 58, 237, 0.2), rgba(236, 72, 153, 0.2));
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    display: inline-block;
+    margin-bottom: 2.5rem;
+    font-size: 1.875rem; /* text-3xl */
+    font-weight: 700; /* font-bold */
+    color: var(--color-white);
+  }
+  
+  .editor-layout {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem; /* gap-6 */
+    margin-top: 1.5rem; /* mt-6 */
+    text-align: left; /* Reset text align for children */
+  }
+  
+  /* Responsive */
+  @media (min-width: 768px) { /* md */
+      .editor-main-heading {
+          font-size: 2.25rem; /* md:text-4xl */
+      }
+      .editor-section {
+          padding-top: 5rem;
+      }
+  }
+  
+  @media (min-width: 1024px) { /* lg */
+    .editor-layout {
+      flex-direction: row;
+      gap: 2rem; /* lg:gap-8 */
+    }
+  }
+  
+  /* --- Canvas Preview Area (Left Side) --- */
+  .canvas-area { /* Uses .glass-card */
+    padding: 1rem; /* p-4 */
+    border-radius: 0.5rem; /* rounded-lg */
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1; /* flex-grow */
+    border: none; /* border-none */
+  }
+  
+  .canvas-area-heading {
+    font-size: 1.25rem; /* text-xl */
+    font-weight: 600; /* font-semibold */
+    color: var(--color-white);
+    margin-bottom: 1rem; /* mb-4 */
+    text-align: center;
+  }
+  
+  .canvas-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1; /* flex-grow */
+    margin-bottom: 1rem; /* mb-4 */
+    background-color: rgba(0, 0, 0, 0.3); /* bg-black/30 */
+    border-radius: 0.375rem; /* rounded-md */
+    overflow: hidden; /* Ensure canvas doesn't overflow */
+    min-height: 200px; /* Give it a minimum height */
+  }
+  
+  #editorCanvas { /* Specific ID from JSX */
+    border: 1px solid rgba(255, 255, 255, 0.2); /* border border-white/20 */
+    box-shadow: inset 0 1px 3px rgba(0,0,0,0.2); /* shadow-inner approx */
+    max-width: 100%; /* Ensure it scales down */
+    height: auto;   /* Maintain aspect ratio */
+    aspect-ratio: 4 / 3; /* Maintain aspect ratio */
+    object-fit: contain; /* Ensure image scales nicely within */
+    display: block; /* Remove extra space below */
+  }
+  
+  #editorCanvas.dragging {
+      cursor: grabbing;
+  }
+  #editorCanvas.hovering {
+      cursor: grab;
+  }
+  
+  
+  .canvas-actions {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.75rem; /* gap-3 */
+    margin-top: auto; /* mt-auto */
+    padding-top: 1rem; /* pt-4 */
+    border-top: 1px solid rgba(255, 255, 255, 0.2); /* border-t border-white/20 */
+  }
+  
+  /* Button styles in utilities.css */
+  .canvas-button {
+      width: 100%;
+      padding: 0.5rem 1.5rem; /* px-6 py-2 */
+      border-radius: 0.375rem; /* rounded-md */
+      box-shadow: 0 1px 2px rgba(0,0,0,0.1); /* shadow */
+      transition: background-color 0.2s;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem; /* gap-2 */
+  }
+  .canvas-button svg {
+      width: 1.25rem; /* w-5 */
+      height: 1.25rem; /* h-5 */
+  }
+  
+  .canvas-save-button {
+      background-color: #2563eb; /* bg-blue-600 */
+      color: white;
+  }
+  .canvas-save-button:hover {
+      background-color: #1d4ed8; /* hover:bg-blue-700 */
+  }
+  
+  .canvas-reset-button {
+      background-color: #db2777; /* bg-pink-600 */
+      color: white;
+  }
+  .canvas-reset-button:hover {
+      background-color: #be185d; /* hover:bg-pink-700 */
+  }
+  
+  
+  /* Responsive Canvas Area */
+  @media (min-width: 640px) { /* sm */
+    .canvas-area {
+       padding: 1.5rem; /* sm:p-6 */
+    }
+    .canvas-actions {
+       flex-direction: row;
+    }
+    .canvas-button {
+        width: auto; /* sm:w-auto */
+    }
+  }
+  
+  @media (min-width: 1024px) { /* lg */
+      .canvas-area {
+          width: 66.666667%; /* lg:w-2/3 */
+      }
+  }
+  
+  /* --- Text Controls Panel (Right Side) --- */
+  .controls-panel { /* Uses .glass-card */
+    padding: 1rem; /* p-4 */
+    border-radius: 0.5rem; /* rounded-lg */
+    display: flex;
+    flex-direction: column;
+    border: none; /* border-none */
+    max-height: 90vh; /* Ensure it doesn't get too tall on large screens */
+  }
+  
+  
+  .controls-panel-heading {
+    font-size: 1.25rem; /* text-xl */
+    font-weight: 600; /* font-semibold */
+    color: var(--color-white);
+    margin-bottom: 1rem; /* mb-4 */
+    text-align: center;
+    position: sticky;
+    top: 0;
+    /* Sticky header background */
+    background: linear-gradient(to bottom, rgba(107, 33, 168, 0.8), transparent); /* Adjust alpha/color from-purple-700/80 approx */
+    backdrop-filter: blur(4px); /* backdrop-blur-sm */
+    padding-top: 0.75rem; /* py-3 */
+    padding-bottom: 0.75rem;
+    /* Negative margins to extend bg to edges of padding */
+    margin-top: -1rem; /* -mt-4 */
+    margin-left: -1rem; /* -mx-4 */
+    margin-right: -1rem;
+    padding-left: 1rem; /* px-4 */
+    padding-right: 1rem;
+    border-top-left-radius: 0.5rem; /* rounded-t-lg */
+    border-top-right-radius: 0.5rem;
+    z-index: 10; /* Keep above scrolling content */
+    box-shadow: 0 1px 2px rgba(0,0,0,0.1); /* shadow-sm */
+  }
+  
+  .controls-panel-body {
+    display: flex; /* Use flexbox for the main layout */
+    flex-direction: column;
+    flex-grow: 1; /* Allows the container to take remaining space */
+    overflow: hidden; /* Prevents buttons from overflowing */
+  }
+  
+  
+  .controls-scroll-container {
+    display: flex; /* Use flex to allow spacing */
+    flex-direction: column;
+    gap: 1.25rem; /* space-y-5 */
+    overflow-y: auto; /* Enable vertical scroll */
+    flex-grow: 1; /* Takes available vertical space */
+    margin-bottom: 1rem; /* mb-4 - Space before Add button */
+    /* Custom scrollbar styling applied via global.css */
+    padding-right: 0.5rem; /* pr-2 */
+    margin-right: -0.5rem; /* -mr-2 to compensate padding for scrollbar */
+  }
+  
+  
+  .controls-placeholder {
+    text-align: center;
+    color: rgba(255, 255, 255, 0.7); /* text-white/70 */
+    padding: 2rem 1rem; /* py-8 px-4 */
+    font-style: italic;
+  }
+  
+  /* Button defined in utilities.css */
+  .controls-add-button {
+    margin-top: auto; /* Push to bottom */
+    width: 100%;
+    padding: 0.75rem 1rem; /* px-4 py-3 */
+    background: linear-gradient(to right, var(--color-purple-600), var(--color-pink-500)); /* bg-gradient-to-r from-purple-600 to-pink-500 */
+    color: white;
+    border-radius: 0.375rem; /* rounded-md */
+    box-shadow: 0 1px 2px rgba(0,0,0,0.1); /* shadow */
+    transition: box-shadow 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem; /* gap-2 */
+  }
+  .controls-add-button:hover {
+     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* hover:shadow-lg */
+  }
+  .controls-add-button:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+      box-shadow: none;
+      filter: grayscale(50%);
+  }
+  .controls-add-button svg {
+      width: 1.25rem; /* w-5 */
+      height: 1.25rem; /* h-5 */
+  }
+  
+  
+  /* Responsive Controls Panel */
+  @media (min-width: 640px) { /* sm */
+    .controls-panel {
+       padding: 1.5rem; /* sm:p-6 */
+    }
+     .controls-panel-heading {
+        margin-top: -1.5rem; /* sm:-mt-6 */
+        margin-left: -1.5rem; /* sm:-mx-6 */
+        margin-right: -1.5rem;
+        padding-left: 1.5rem; /* sm:px-6 */
+        padding-right: 1.5rem;
+     }
+  }
+  
+  @media (min-width: 1024px) { /* lg */
+      .controls-panel {
+          width: 33.333333%; /* lg:w-1/3 */
+      }
+   }

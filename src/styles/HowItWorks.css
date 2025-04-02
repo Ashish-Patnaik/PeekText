@@ -1,0 +1,87 @@
+/* src/styles/HowItWorks.css */
+.how-it-works-section {
+    padding-top: 4rem; /* py-16 */
+    padding-bottom: 4rem;
+  }
+  
+  .how-it-works-header {
+    text-align: center;
+    margin-bottom: 4rem; /* mb-16 */
+  }
+  
+  .how-it-works-title {
+    font-size: 1.875rem; /* text-3xl */
+    font-weight: 700; /* font-bold */
+    margin-bottom: 1rem; /* mb-4 */
+  }
+  
+  .how-it-works-subtitle {
+    max-width: 42rem; /* max-w-2xl */
+    margin-left: auto;
+    margin-right: auto;
+    opacity: 0.8; /* opacity-80 */
+  }
+  
+  .how-it-works-grid {
+    display: grid;
+    gap: 2rem; /* gap-8 */
+    max-width: 64rem; /* max-w-5xl */
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .how-it-works-step { /* Uses .glass-card */
+    padding: 1.5rem; /* p-6 */
+    text-align: center;
+    transition: transform 0.3s;
+  }
+  
+  .how-it-works-step:hover {
+    transform: scale(1.05); /* hover:scale-105 */
+  }
+  
+  .step-icon-wrapper {
+    width: 4rem; /* w-16 */
+    height: 4rem; /* h-16 */
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1.5rem; /* mb-6 */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* shadow-lg */
+  }
+  
+  .step-icon-wrapper.step-1 { background-color: var(--color-indigo-600); } /* bg-indigo-500 */
+  .step-icon-wrapper.step-2 { background-color: var(--color-purple-600); } /* bg-purple-500 */
+  .step-icon-wrapper.step-3 { background-color: var(--color-pink-500); } /* bg-pink-500 */
+  
+  .step-number {
+    font-size: 1.5rem; /* text-2xl */
+    font-weight: 700; /* font-bold */
+  }
+  
+  .step-title {
+    font-size: 1.25rem; /* text-xl */
+    font-weight: 600; /* font-semibold */
+    margin-bottom: 0.75rem; /* mb-3 */
+  }
+  
+  .step-description {
+    opacity: 0.8; /* opacity-80 */
+  }
+  
+  /* Responsive */
+  @media (min-width: 768px) { /* md */
+    .how-it-works-section {
+      padding-top: 6rem; /* md:py-24 */
+      padding-bottom: 6rem;
+    }
+    .how-it-works-title {
+      font-size: 2.25rem; /* md:text-4xl */
+    }
+    .how-it-works-grid {
+      grid-template-columns: repeat(3, 1fr); /* md:grid-cols-3 */
+    }
+  }

@@ -1,0 +1,135 @@
+/* src/styles/UploadSection.css */
+.upload-section {
+    padding-top: 4rem; /* py-16 */
+    padding-bottom: 4rem;
+  }
+  
+  .upload-container {
+    max-width: 42rem; /* max-w-3xl */
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .upload-card { /* Uses .glass-card */
+    padding: 2rem; /* p-8 */
+    border-radius: 1rem; /* rounded-2xl */
+  }
+  
+  .upload-title {
+    font-size: 1.875rem; /* text-3xl */
+    font-weight: 700; /* font-bold */
+    text-align: center;
+    margin-bottom: 2rem; /* mb-8 */
+  }
+  
+  .upload-input-area {
+    margin-bottom: 2.5rem; /* mb-10 */
+  }
+  
+  .upload-dropzone {
+    position: relative;
+    border: 2px dashed rgba(255, 255, 255, 0.4); /* border-white border-opacity-40 */
+    border-radius: 0.75rem; /* rounded-xl */
+    padding: 2rem; /* p-8 */
+    text-align: center;
+    transition: border-color 0.3s;
+    background-color: rgba(255, 255, 255, 0.05); /* bg-white/5 */
+  }
+  
+  .upload-dropzone:hover {
+    border-color: rgba(255, 255, 255, 0.7); /* hover:border-opacity-70 */
+  }
+  
+  .upload-input { /* Visually hidden, label acts as trigger */
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
+    z-index: 10;
+  }
+  
+  .upload-label {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .upload-icon {
+    height: 4rem; /* h-16 */
+    width: 4rem; /* w-16 */
+    margin-bottom: 1rem; /* mb-4 */
+    color: var(--color-indigo-300); /* text-indigo-300 */
+    stroke-width: 1.5;
+  }
+  
+  .upload-heading {
+    font-size: 1.25rem; /* text-xl */
+    font-weight: 600; /* font-semibold */
+    margin-bottom: 0.5rem; /* mb-2 */
+  }
+  
+  .upload-file-name {
+    opacity: 0.7; /* opacity-70 */
+    margin-bottom: 0.5rem; /* mb-2 */
+    min-height: 1.5em; /* Ensure space even when empty */
+    word-break: break-all; /* Prevent long names overflowing */
+    display: block; /* Make it block for truncate */
+    max-width: 90%; /* Prevent taking full width on long names */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  
+  .upload-file-name.selected {
+    font-weight: 500; /* font-medium */
+    color: var(--color-indigo-300); /* text-indigo-300 */
+    opacity: 1;
+  }
+  
+  .upload-hint {
+    font-size: 0.75rem; /* text-xs */
+    opacity: 0.5; /* opacity-50 */
+  }
+  
+  .upload-loading-area {
+    text-align: center;
+    margin-bottom: 2.5rem; /* mb-10 */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  /* Loader defined in utilities.css */
+  
+  .upload-progress-text {
+    margin-top: 1rem; /* mt-4 */
+    font-size: 1.125rem; /* text-lg */
+    opacity: 0.8; /* opacity-80 */
+  }
+  
+  .upload-progress-hint {
+    font-size: 0.875rem; /* text-sm */
+    opacity: 0.6; /* opacity-60 */
+  }
+  
+  .upload-action-button {
+      text-align: center;
+  }
+  /* Button defined in utilities.css */
+  .upload-start-button {
+      padding: 0.75rem 2.5rem; /* px-10 py-3 */
+      font-size: 1.125rem; /* text-lg */
+  }
+  
+  /* Responsive */
+  @media (min-width: 768px) { /* md */
+      .upload-card {
+          padding: 3rem; /* md:p-12 */
+      }
+      .upload-title {
+          font-size: 2.25rem; /* md:text-4xl */
+      }
+    }
