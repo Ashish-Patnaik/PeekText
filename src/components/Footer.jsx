@@ -45,7 +45,7 @@ function Footer() {
             <h4 className="footer-link-heading">Tools</h4>
             <ul className="footer-link-list">
               <li><a href="https://compress-quick.vercel.app/">CompressQuick</a></li>
-              <li><a href="https://peek-text.vercel.app/">PeekText</a></li>
+              <li><a href="https://pure-pixel-pi.vercel.app/">PurePixel</a></li>
             </ul>
           </div>
         </div>
