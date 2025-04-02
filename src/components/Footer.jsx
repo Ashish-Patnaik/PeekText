@@ -42,10 +42,10 @@ function Footer() {
             </ul>
           </div>
           <div className="footer-link-group">
-            <h4 className="footer-link-heading">Legal</h4>
+            <h4 className="footer-link-heading">Tools</h4>
             <ul className="footer-link-list">
-              <li><a href="#">Privacy Policy</a></li>
-              <li><a href="#">Terms of Service</a></li>
+              <li><a href="https://compress-quick.vercel.app/">CompressQuick</a></li>
+              <li><a href="https://peek-text.vercel.app/">PeekText</a></li>
             </ul>
           </div>
         </div>
