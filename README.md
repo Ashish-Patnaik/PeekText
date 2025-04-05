@@ -38,7 +38,8 @@ It's the perfect solution for making your social media posts, presentations, web
 
 Imagine uploading a scenic landscape photo. You add the location name as text, pick a bold font, maybe add a subtle gradient and shadow. With PeekText, the text intelligently appears *behind* elements like mountains or trees in the foreground, creating an immersive and professional 3D look – all achieved in just a few clicks!
 
-![Screenshot 2025-04-05 122902](https://github.com/user-attachments/assets/7a3b9356-b781-41da-be1f-60d1ec1e5cd9)
+![peektext a](https://github.com/user-attachments/assets/1e2378f9-aa8c-40de-8ca7-8ac8c4f7f259)
+
 
 
 ---
@@ -101,7 +102,7 @@ If you want to run PeekText locally or contribute:
 
 1.  **Clone the repository:**
     ```bash
-    git clone [https://github.com/Ashish-Patnaik/PeekText.git](https://github.com/Ashish-Patnaik/PeekText.git)
+    git clone https://github.com/Ashish-Patnaik/PeekText.git
     ```
 2.  **Navigate to the directory:**
     ```bash
