@@ -50,19 +50,19 @@ Here are some examples of what you can create with PeekText:
 
 
 <p align="center">
-  <img src="./public/images p/Peek-Text_broken.png" alt="PeekText Example 1" width="400"/>
-  <br><em>Example 1: Text behind mountains</em>
+  <img src="./public/images p/PeekText_broken.png" alt="PeekText Example 1" width="400"/>
+  <br><em>Example 1</em>
 </p>
 <br>
 
 <p align="center">
-  <img src="./public/images p/Peek-Text_spring.png" alt="PeekText Example 2" width="400"/>
-  <br><em>Example 2: Creative text effect on portrait</em>
+  <img src="./public/images p/PeekText_spring.png" alt="PeekText Example 2" width="400"/>
+  <br><em>Example 2</em>
 </p>
 <br>
 <p align="center">
-  <img src="./public/images p/Peek-Text_colourfull.png" alt="PeekText Example 3" width="400"/>
-  <br><em>Example 3: Title integrated with object</em>
+  <img src="./public/images p/PeekText_colourfull.png" alt="PeekText Example 3" width="400"/>
+  <br><em>Example 3</em>
 </p>
 
 
