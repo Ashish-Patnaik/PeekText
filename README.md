@@ -54,7 +54,7 @@ Imagine uploading a scenic landscape photo. You add the location name as text, p
 
 <p align="center">
   <a href="https://compress-quick.vercel.app/">
-    <img src="https://github.com/user-attachments/assets/1e2378f9-aa8c-40de-8ca7-8ac8c4f7f259" alt="CompressQuick Logo" width="250">
+    <img src="https://github.com/user-attachments/assets/1e2378f9-aa8c-40de-8ca7-8ac8c4f7f259" alt="peektext Logo" width="250">
   </a>
 </p>
 
@@ -91,8 +91,6 @@ Here are some examples of what you can create with PeekText:
 * **Frontend**: React, CSS, JavaScript
 * **Text & Image Manipulation**: Canvas, background remover
 * **Deployment**: Vercel
-
-*(Update this section with the specific libraries or frameworks you used, e.g., Fabric.js, Konva.js, pure JS, etc.)*
 
 ---
 
