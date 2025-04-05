@@ -9,6 +9,20 @@
   ✨ Create stunning 3D "text behind image" effects online – for free.
 </p>
 
+<p align="center">
+  <a href="https://github.com/Ashish-Patnaik/PeekText">
+    <img src="https://img.shields.io/github/stars/Ashish-Patnaik/CompressQuick?style=social" alt="GitHub Stars">
+  </a>
+  <a href="https://github.com/Ashish-Patnaik/PeekText/issues">
+    <img src="https://img.shields.io/github/issues/Ashish-Patnaik/CompressQuick" alt="GitHub Issues">
+  </a>
+  <a href="https://peek-text.vercel.app/">
+    <img src="https://img.shields.io/badge/Website-Online-brightgreen" alt="Website">
+  </a>
+</p>
+
+<br>
+
 ---
 
 ## 🚀 What is PeekText?
@@ -38,7 +52,11 @@ It's the perfect solution for making your social media posts, presentations, web
 
 Imagine uploading a scenic landscape photo. You add the location name as text, pick a bold font, maybe add a subtle gradient and shadow. With PeekText, the text intelligently appears *behind* elements like mountains or trees in the foreground, creating an immersive and professional 3D look – all achieved in just a few clicks!
 
-![peektext a](https://github.com/user-attachments/assets/1e2378f9-aa8c-40de-8ca7-8ac8c4f7f259)
+<p align="center">
+  <a href="https://compress-quick.vercel.app/">
+    <img src="https://github.com/user-attachments/assets/1e2378f9-aa8c-40de-8ca7-8ac8c4f7f259" alt="CompressQuick Logo" width="250">
+  </a>
+</p>
 
 
 
